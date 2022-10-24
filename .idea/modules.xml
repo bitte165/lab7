@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/lab7.client/lab7.client.iml" filepath="$PROJECT_DIR$/lab7.client/lab7.client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab7.lib/lab7.lib.iml" filepath="$PROJECT_DIR$/lab7.lib/lab7.lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lab7.server/lab7.server.iml" filepath="$PROJECT_DIR$/lab7.server/lab7.server.iml" />
+    </modules>
+  </component>
+</project>
