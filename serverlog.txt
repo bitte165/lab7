@@ -1,0 +1,335 @@
+
+[INFO   ] 2022-10-25 05:07:06,718 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:08:26,503 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:08:38,512 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:08:47,164 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 05:08:47,168 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:27:10,993 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:27:15,496 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:34:09,172 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:34:15,340 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:34:20,833 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 05:34:20,843 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:36:20,248 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:37:21,574 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:37:26,509 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:37:34,508 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:37:38,839 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 05:37:38,849 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:41:01,708 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:41:06,810 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:41:16,802 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:41:20,081 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 05:41:20,093 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:42:40,987 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:42:47,428 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:42:51,622 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:42:56,109 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 05:42:56,125 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:43:29,932 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:43:35,620 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:43:38,747 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:43:40,599 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 05:43:40,602 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:44:35,212 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:44:41,744 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:44:50,975 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:45:44,811 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:45:49,163 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:45:54,420 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:45:59,722 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:46:14,826 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:46:17,988 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:46:21,395 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 05:46:21,410 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:46:35,148 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:47:37,641 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:47:44,705 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:47:49,440 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 05:47:49,455 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:48:47,356 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:49:08,279 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:49:16,012 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:49:19,539 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 05:49:19,553 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 05:49:58,144 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:50:03,901 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:50:08,186 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:55:41,278 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:55:49,439 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:55:54,523 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:59:21,186 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 05:59:27,280 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 05:59:36,689 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 05:59:49,061 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 05:59:49,064 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:00:07,637 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:00:12,930 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:00:24,046 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:01:31,784 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:01:36,464 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:01:41,963 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:03:12,351 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:03:21,013 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:03:29,367 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:03:34,710 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:03:40,894 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:03:43,650 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:03:43,653 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:06:04,375 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:06:10,806 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:06:16,256 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:06:18,202 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:06:18,205 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:09:03,842 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:09:11,417 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:09:15,383 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:09:18,562 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:09:18,565 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:10:08,385 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:10:14,393 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:10:18,015 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:10:19,767 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:10:19,770 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:11:41,319 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:11:47,224 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:11:50,729 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:11:52,364 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:11:52,367 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:12:48,420 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:12:55,605 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:12:59,717 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:13:04,528 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:13:04,531 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:13:43,811 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:13:49,968 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:13:55,122 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:13:58,254 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:13:58,257 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:13:59,063 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "help" command
+[INFO   ] 2022-10-25 06:14:33,351 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:19:00,075 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:19:20,652 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:19:22,831 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:19:22,834 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:19:33,526 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:19:40,475 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:19:46,074 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:19:49,662 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:19:49,665 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:19:52,191 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "help" from the user "niga"
+[INFO   ] 2022-10-25 06:19:52,192 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "help" command
+[INFO   ] 2022-10-25 06:19:52,193 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:19:53,141 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "exit" from the user "niga"
+[INFO   ] 2022-10-25 06:19:53,142 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "exit" command
+[INFO   ] 2022-10-25 06:19:53,142 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:23:06,213 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:23:18,863 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:23:24,041 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:23:26,604 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:23:26,607 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:23:50,126 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:23:55,638 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:23:58,991 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:24:00,860 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:24:00,862 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:24:03,158 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "help" from the user "niga"
+[INFO   ] 2022-10-25 06:24:03,159 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "help" command
+[INFO   ] 2022-10-25 06:24:03,160 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:24:06,370 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "niga"
+[INFO   ] 2022-10-25 06:24:06,370 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:24:06,374 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:24:11,962 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "history" from the user "niga"
+[INFO   ] 2022-10-25 06:24:11,962 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "history" command
+[INFO   ] 2022-10-25 06:24:11,963 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:24:45,038 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:24:53,041 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:24:57,605 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:24:59,264 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:24:59,267 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:25:31,993 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "niga"
+[INFO   ] 2022-10-25 06:25:32,002 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[ERROR  ] 2022-10-25 06:25:32,026 [pool-2-thread-1] ru.bitte.lab7.commands.AddCommand  - Unexpected database exception occurred during the command execution
+[DEBUG  ] 2022-10-25 06:25:32,026 [pool-2-thread-1] ru.bitte.lab7.commands.AddCommand  - ResultSet not positioned properly, perhaps you need to call next.
+[INFO   ] 2022-10-25 06:25:32,026 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:25:58,211 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:26:46,919 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:26:50,127 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:26:51,860 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:26:51,863 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:27:10,588 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "niga"
+[INFO   ] 2022-10-25 06:27:10,596 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[ERROR  ] 2022-10-25 06:27:10,617 [pool-2-thread-1] ru.bitte.lab7.commands.AddCommand  - Unexpected database exception occurred during the command execution
+[DEBUG  ] 2022-10-25 06:27:10,618 [pool-2-thread-1] ru.bitte.lab7.commands.AddCommand  - ResultSet not positioned properly, perhaps you need to call next.
+[ERROR  ] 2022-10-25 06:27:10,618 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Unknown error while executing a task
+[ERROR  ] 2022-10-25 06:27:10,618 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Exception description: java.lang.RuntimeException: org.postgresql.util.PSQLException: ResultSet not positioned properly, perhaps you need to call next.
+[INFO   ] 2022-10-25 06:28:22,284 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:28:28,741 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:28:32,362 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:28:35,303 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:28:35,305 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:28:56,960 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "niga"
+[INFO   ] 2022-10-25 06:28:56,961 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[INFO   ] 2022-10-25 06:28:56,976 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:29:00,038 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "niga"
+[INFO   ] 2022-10-25 06:29:00,038 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:29:00,054 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:36:25,152 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:45:01,057 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:45:06,294 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:45:08,195 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:45:08,198 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:45:10,365 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "niga"
+[INFO   ] 2022-10-25 06:45:10,366 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:45:10,369 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:45:16,202 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "exit" from the user "niga"
+[INFO   ] 2022-10-25 06:45:16,202 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "exit" command
+[INFO   ] 2022-10-25 06:45:16,203 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:45:16,203 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - The user "niga" has successfully disconnected by the exit command
+[INFO   ] 2022-10-25 06:45:40,872 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:45:43,849 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:45:51,741 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:46:00,461 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 06:46:00,475 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:46:05,827 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "ellie"
+[INFO   ] 2022-10-25 06:46:05,827 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:46:05,831 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:46:07,335 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "help" from the user "ellie"
+[INFO   ] 2022-10-25 06:46:07,335 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "help" command
+[INFO   ] 2022-10-25 06:46:07,336 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:46:32,736 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "ellie"
+[INFO   ] 2022-10-25 06:46:32,737 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[ERROR  ] 2022-10-25 06:46:32,763 [pool-2-thread-3] ru.bitte.lab7.commands.AddCommand  - Unexpected database exception occurred during the command execution
+[DEBUG  ] 2022-10-25 06:46:32,763 [pool-2-thread-3] ru.bitte.lab7.commands.AddCommand  - ERROR: null value in column "username" of relation "routes" violates not-null constraint
+  Detail: Failing row contains (1, ride to hoes, 2022-10-25 06:46:32.737304, 12, 21, 1, 2, 71, null).
+[ERROR  ] 2022-10-25 06:46:32,763 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Unknown error while executing a task
+[ERROR  ] 2022-10-25 06:46:32,763 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Exception description: java.lang.RuntimeException: org.postgresql.util.PSQLException: ERROR: null value in column "username" of relation "routes" violates not-null constraint
+  Detail: Failing row contains (1, ride to hoes, 2022-10-25 06:46:32.737304, 12, 21, 1, 2, 71, null).
+[INFO   ] 2022-10-25 06:48:41,542 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:48:58,533 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:49:07,491 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:49:15,071 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:49:15,074 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:49:30,521 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "ellie"
+[INFO   ] 2022-10-25 06:49:30,521 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[ERROR  ] 2022-10-25 06:49:30,544 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Unknown error while executing a task
+[ERROR  ] 2022-10-25 06:49:30,544 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Exception description: java.lang.RuntimeException: org.postgresql.util.PSQLException: ERROR: null value in column "username" of relation "routes" violates not-null constraint
+  Detail: Failing row contains (2, ride, 2022-10-25 06:49:30.522509, 12, 12, 3, 4, 21, null).
+[INFO   ] 2022-10-25 06:57:57,185 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:58:24,511 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:58:30,627 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:58:33,526 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:58:33,529 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:58:36,921 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "ellie"
+[INFO   ] 2022-10-25 06:58:36,922 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:58:36,925 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:58:59,943 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "ellie"
+[INFO   ] 2022-10-25 06:58:59,944 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[INFO   ] 2022-10-25 06:58:59,961 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:59:02,046 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "ellie"
+[INFO   ] 2022-10-25 06:59:02,046 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:59:02,060 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:59:06,212 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "exit" from the user "ellie"
+[INFO   ] 2022-10-25 06:59:06,213 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "exit" command
+[INFO   ] 2022-10-25 06:59:06,213 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:59:06,213 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - The user "ellie" has successfully disconnected by the exit command
+[INFO   ] 2022-10-25 06:59:13,270 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 06:59:19,154 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 06:59:22,919 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:59:26,735 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 06:59:26,738 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:59:28,303 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "ellie"
+[INFO   ] 2022-10-25 06:59:28,304 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:59:28,321 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 06:59:41,479 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 06:59:47,866 [Thread-2] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 06:59:47,875 [Thread-2] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 06:59:49,720 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "niga"
+[INFO   ] 2022-10-25 06:59:49,720 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 06:59:49,721 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 06:59:55,973 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Accepted command "remove_by_id" from the user "niga"
+[INFO   ] 2022-10-25 06:59:55,973 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Ran the "remove_by_id" command
+[ERROR  ] 2022-10-25 06:59:55,982 [pool-2-thread-3] ru.bitte.lab7.commands.RemoveByIDCommand  - Unexpected database exception occurred during the command execution
+[DEBUG  ] 2022-10-25 06:59:55,983 [pool-2-thread-3] ru.bitte.lab7.commands.RemoveByIDCommand  - No value specified for parameter 1.
+[INFO   ] 2022-10-25 06:59:55,983 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 07:00:00,818 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "niga"
+[INFO   ] 2022-10-25 07:00:00,818 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 07:00:00,818 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Send "niga" response to the command
+[INFO   ] 2022-10-25 07:00:08,452 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "remove_by_id" from the user "ellie"
+[INFO   ] 2022-10-25 07:00:08,452 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "remove_by_id" command
+[ERROR  ] 2022-10-25 07:00:08,453 [pool-2-thread-5] ru.bitte.lab7.commands.RemoveByIDCommand  - Unexpected database exception occurred during the command execution
+[DEBUG  ] 2022-10-25 07:00:08,454 [pool-2-thread-5] ru.bitte.lab7.commands.RemoveByIDCommand  - No value specified for parameter 1.
+[INFO   ] 2022-10-25 07:00:08,454 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 07:02:49,723 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:02:59,119 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:03:05,751 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:03:48,145 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:03:51,378 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:04:05,835 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:04:11,747 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 07:04:33,055 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:04:38,423 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:04:45,873 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:04:51,575 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 07:04:51,591 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 07:05:13,311 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "add" from the user "ellie"
+[INFO   ] 2022-10-25 07:05:13,311 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "add" command
+[INFO   ] 2022-10-25 07:05:13,328 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 07:05:15,283 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "ellie"
+[INFO   ] 2022-10-25 07:05:15,284 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 07:05:15,300 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 07:05:32,736 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:05:40,568 [Thread-2] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 07:05:40,578 [Thread-2] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 07:05:42,896 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "lena"
+[INFO   ] 2022-10-25 07:05:42,896 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 07:05:42,896 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Send "lena" response to the command
+[INFO   ] 2022-10-25 07:05:45,806 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Accepted command "remove_by_id" from the user "lena"
+[INFO   ] 2022-10-25 07:05:45,807 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Ran the "remove_by_id" command
+[ERROR  ] 2022-10-25 07:05:45,816 [pool-2-thread-4] ru.bitte.lab7.commands.RemoveByIDCommand  - Unexpected database exception occurred during the command execution
+[DEBUG  ] 2022-10-25 07:05:45,817 [pool-2-thread-4] ru.bitte.lab7.commands.RemoveByIDCommand  - The column name user was not found in this ResultSet.
+[INFO   ] 2022-10-25 07:05:45,817 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Send "lena" response to the command
+[INFO   ] 2022-10-25 07:06:43,983 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:06:51,084 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:07:06,251 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:07:09,952 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 07:07:09,954 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 07:07:15,289 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "show" from the user "lena"
+[INFO   ] 2022-10-25 07:07:15,290 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "show" command
+[INFO   ] 2022-10-25 07:07:15,307 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "lena" response to the command
+[INFO   ] 2022-10-25 07:07:22,273 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "remove_by_id" from the user "lena"
+[INFO   ] 2022-10-25 07:07:22,273 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "remove_by_id" command
+[INFO   ] 2022-10-25 07:07:22,279 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "lena" response to the command
+[INFO   ] 2022-10-25 07:07:26,566 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "exit" from the user "lena"
+[INFO   ] 2022-10-25 07:07:26,566 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "exit" command
+[INFO   ] 2022-10-25 07:07:26,567 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "lena" response to the command
+[INFO   ] 2022-10-25 07:07:26,567 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - The user "lena" has successfully disconnected by the exit command
+[INFO   ] 2022-10-25 07:07:31,370 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:08:55,782 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:08:59,775 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:09:04,646 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:10:56,699 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:11:36,123 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:11:41,296 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:11:49,542 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:11:54,413 [Thread-2] ru.bitte.lab7.server.Server  - Accepted a signing-up request
+[INFO   ] 2022-10-25 07:11:54,417 [Thread-2] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 07:11:55,941 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Accepted command "exit" from the user "ellie"
+[INFO   ] 2022-10-25 07:11:55,942 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Ran the "exit" command
+[INFO   ] 2022-10-25 07:11:55,942 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 07:11:55,942 [pool-1-thread-1] ru.bitte.lab7.server.ClientTask  - The user "ellie" has successfully disconnected by the exit command
+[INFO   ] 2022-10-25 07:12:00,791 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:12:05,943 [Thread-3] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 07:12:05,945 [Thread-3] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 07:12:13,863 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Accepted command "exit" from the user "ellie"
+[INFO   ] 2022-10-25 07:12:13,863 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Ran the "exit" command
+[INFO   ] 2022-10-25 07:12:13,864 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - Send "ellie" response to the command
+[INFO   ] 2022-10-25 07:12:13,864 [pool-1-thread-2] ru.bitte.lab7.server.ClientTask  - The user "ellie" has successfully disconnected by the exit command
+[INFO   ] 2022-10-25 07:13:03,594 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 07:14:10,687 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 07:14:13,872 [main] ru.bitte.lab7.server.Server  - Accepted a new client
+[INFO   ] 2022-10-25 07:14:16,717 [Thread-1] ru.bitte.lab7.server.Server  - Accepted a login request
+[INFO   ] 2022-10-25 07:14:16,719 [Thread-1] ru.bitte.lab7.server.Server  - Starting a client handling task
+[INFO   ] 2022-10-25 07:14:25,653 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
+[INFO   ] 2022-10-25 11:21:32,864 [main] ru.bitte.lab7.server.Server  - Starting the server...
+[INFO   ] 2022-10-25 11:21:35,421 [Thread-0] ru.bitte.lab7.server.Server  - Shutting down.
