@@ -10,7 +10,6 @@ import java.net.ConnectException;
 import java.net.Socket;
 import java.net.SocketException;
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -33,9 +32,10 @@ public class Client {
         this.port = port;
         Runnable shutdown = () -> {
             try {
+                out.write(new byte[] {0, 0, 0, 0});
                 socket.close();
             } catch (IOException e) {
-                throw new RuntimeException(e);
+                System.out.println(e.getMessage());
             } catch (NullPointerException ignored) {}
             inS.close();
         };
@@ -47,6 +47,9 @@ public class Client {
         // starting connection
         try {
             authorize();
+        } catch (SocketException e) {
+            System.out.printf("Network exception occurred: " + e.getMessage());
+            System.exit(1);
         } catch (IOException e) {
             System.out.println("Unknown IO exception while authorizing");
             throw new RuntimeException(e);
@@ -63,11 +66,6 @@ public class Client {
                 System.out.println(e.getMessage());
                 continue;
             }
-//            if (commandRequest.getCommandName().equals("exit")) {
-//                active = false;
-//                System.out.println("Exiting...");
-//
-//            } else
             if (commandRequest.getCommandName().equals("execute_script")) {
                 try {
                     assert commandRequest instanceof ArgumentCommandRequest;
@@ -76,10 +74,6 @@ public class Client {
                     for (String command : commands) {
                         try {
                             AbstractCommandRequest cr = parseCommand(command);
-//                            if (cr.getCommandName().equals("exit")) {
-//                                System.out.println("Can't exit while in a script!");
-//                                continue;
-//                            } else
                             if (cr.getCommandName().equals("execute_script")) {
                                 System.out.println("Executing scripts inside of another one is prohibited");
                                 continue;
@@ -89,7 +83,6 @@ public class Client {
                             if (sr.isTerminating()) {
                                 active = false;
                             }
-
                         } catch (CommandParsingException | ElementConstructionException e) {
                             System.out.println(e.getMessage());
                         }
@@ -112,9 +105,13 @@ public class Client {
         try {
             socket.close();
             inS.close();
+        } catch (SocketException e) {
+            System.out.printf("Network exception occurred: " + e.getMessage());
+            System.exit(1);
         } catch (IOException e) {
-            System.out.println("Unknown IO exception while closing the connection");
-            throw new RuntimeException(e.getMessage());
+            System.out.println("Unknown IO exception while closing the connection:");
+            System.out.println(e.getMessage());
+            System.exit(1);
         }
     }
 
@@ -130,8 +127,10 @@ public class Client {
                 System.out.println(e.getMessage());
                 System.exit(1);
             } catch (IOException e) {
-                System.out.println("Unknown IO exception while starting server connection");
-                throw new RuntimeException(e);
+                System.out.println("Unknown IO exception while starting server connection:");
+                System.out.println(e.getMessage());
+                System.exit(1);
+//                throw new RuntimeException(e);
             }
         } else {
             throw new UserAuthorizationException("Unknown option");
@@ -145,13 +144,14 @@ public class Client {
             out.write(saltBody);
             int responseHead = ByteBuffer.wrap(in.readNBytes(4)).getInt();
             byte[] responseBody = in.readNBytes(responseHead);
-            String response = new String(responseBody, StandardCharsets.UTF_8);
-            if (response.equals("dummy")) {
-                throw new UserAuthorizationException("No user with such username in the database");
-            } else if (response.length() == 16) {
+            ServerResponse response = (ServerResponse) bytesToObject(responseBody);
+            if (response.isTerminating()) {
+                throw new UserAuthorizationException(response.getResponse());
+            } else {
+                String salt = response.getResponse();
                 System.out.print("Enter password: ");
                 String password = String.valueOf(inS.nextLine());
-                AuthorizeRequest ar = new AuthorizeRequest(username, password, response);
+                AuthorizeRequest ar = new AuthorizeRequest(username, password, salt);
                 user = ar.toUser();
                 byte[] arBody = objectToBytes(ar);
                 byte[] arHead = ByteBuffer.allocate(4).putInt(arBody.length).flip().array();
@@ -163,10 +163,8 @@ public class Client {
                 if (sr.isTerminating()) {
                     throw new UserAuthorizationException(sr.getResponse());
                 }
-            } else {
-                throw new RuntimeException("corrupted salt");
+                assert sr.getResponse().equals("ok");
             }
-
         } else if (choice.equalsIgnoreCase("S")) {
             System.out.print("Enter username: ");
             String username = inS.nextLine().strip();
@@ -199,15 +197,12 @@ public class Client {
         } catch (SocketException e) {
             if (e.getMessage().equals("Connection reset by peer")) {
                 System.out.println(e.getMessage());
-                try {
-                    socket.close();
-                } catch (IOException ee) {
-                    System.out.println(ee.getMessage());
-                }
-                System.exit(1 );
+            } else {
+                System.out.printf("Network exception occurred: " + e.getMessage());
             }
-        }
-        catch (IOException e) {
+            System.exit(1 );
+            throw new RuntimeException("shouldn't get here");
+        } catch (IOException e) {
             // todo
             System.out.println("Unknown IO exception while sending a command request");
             throw new RuntimeException(e);
@@ -217,6 +212,14 @@ public class Client {
             int bodySize = ByteBuffer.wrap(header).getInt();
             byte[] body = in.readNBytes(bodySize);
             return (ServerResponse) bytesToObject(body);
+        } catch (SocketException e) {
+            if (e.getMessage().equals("Connection reset by peer")) {
+                System.out.println(e.getMessage());
+            } else {
+                System.out.printf("Network exception occurred: " + e.getMessage());
+            }
+            System.exit(1);
+            throw new RuntimeException("shouldn't get here");
         } catch (IOException e) {
             // todo
             System.out.println("Unknown IO exception while receiving command response");

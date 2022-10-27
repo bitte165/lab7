@@ -21,13 +21,12 @@ public class ResponseTask implements Callable<Boolean> {
     @Override
     public Boolean call() {
         try {
-            byte[] body = Server.objectToBytes(serverResponse);
-            byte[] header = ByteBuffer.allocate(4).putInt(body.length).flip().array();
             var out = client.getOutputStream();
+            byte[] body = Server.objectToBytes(serverResponse);
+            byte[] header = ByteBuffer.allocate(4).putInt(body.length).array();
             out.write(header);
             out.write(body);
             return serverResponse.isTerminating();
-            // log
         } catch (IOException e) {
             log.error("Unknown IO exception occurred while working with a client");
             log.error("Exception description: " + e.getMessage());

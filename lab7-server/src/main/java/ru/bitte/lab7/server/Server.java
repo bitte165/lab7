@@ -10,13 +10,13 @@ import ru.bitte.lab7.requests.*;
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.nio.BufferUnderflowException;
 import java.nio.ByteBuffer;
-import java.nio.charset.StandardCharsets;
 import java.sql.*;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ForkJoinPool;
+import java.util.concurrent.*;
 
 @Log4j
 public class Server {
@@ -27,12 +27,14 @@ public class Server {
     private final ForkJoinPool responsePool;
     private final ServerSocket server;
     private Socket newClient = null;
-//    private static Logger logger = Logger.getLogger(this.getClass());
+    private volatile boolean working = false;
+    private final Set<String> activeUsers = Collections.synchronizedSet(new HashSet<>());
 
     public Server(String dbConfig, int port) throws IOException {
         // set up db
         HikariConfig config = new HikariConfig(dbConfig);
         dataSource = new HikariDataSource(config);
+        dataSource.setConnectionTimeout(100000);
         // set up the db
         try (Connection conn = dataSource.getConnection()) {
             String createUsers = """
@@ -116,7 +118,8 @@ public class Server {
 
     public void start() throws IOException {
         log.info("Starting the server...");
-        while (true) {
+        working = true;
+        while (working) {
             newClient = server.accept();
             log.info("Accepted a new client");
             new Thread(new Runnable() {
@@ -125,7 +128,7 @@ public class Server {
                     // authorize the client
                     try {
                         var in = client.getInputStream();
-                        var out = client.getOutputStream();
+//                        var out = client.getOutputStream();
                         ServerResponse response = null;
                         int header = ByteBuffer.wrap(in.readNBytes(4)).getInt();
                         byte[] body = in.readNBytes(header);
@@ -136,16 +139,19 @@ public class Server {
                             log.info("Accepted a signing-up request");
                         } else if (deserObj instanceof SaltRequest) {
                             SaltRequest saltRequest = (SaltRequest) deserObj;
-                            String salt = null;
+                            log.info("Accepted a login request");
+                            ServerResponse saltResponse = null;
                             try (Connection conn = dataSource.getConnection()) {
                                 PreparedStatement check = conn.prepareStatement("SELECT salt from Users where username=?");
                                 check.setString(1, saltRequest.getUsername());
                                 try (ResultSet checkRS = check.executeQuery()) {
                                     if (checkRS.isBeforeFirst()) {
                                         checkRS.next();
-                                        salt = checkRS.getString("salt");
+                                        saltResponse = new ServerResponse(checkRS.getString("salt"), false);
+                                        assert saltResponse.getResponse().length() == 16;
                                     } else {
-                                        salt = "dummy";
+                                        saltResponse = new ServerResponse("No user with such username is signed up", true);
+                                        log.info("User tried to log in with a non-existing username, was refused");
                                     }
                                 }
                             } catch (SQLException e) {
@@ -153,16 +159,24 @@ public class Server {
                                 log.debug(e.getMessage());
 //                                throw new RuntimeException(e);
                             }
-                            assert salt != null;
-                            byte[] saltBytes = salt.getBytes(StandardCharsets.UTF_8);
-                            byte[] saltHeader = ByteBuffer.allocate(4).putInt(saltBytes.length).array();
-                            out.write(saltHeader);
-                            out.write(saltBytes);
-                            if (!salt.equals("dummy")) {
-                                int requestHead = ByteBuffer.wrap(in.readNBytes(4)).getInt();
-                                byte[] requestBody = in.readNBytes(requestHead);
+                            assert saltResponse != null;
+                            if (saltResponse.getResponse().length() == 16 && activeUsers.contains(saltRequest.getUsername())) {
+                                saltResponse = new ServerResponse("Somebody with this username is already logged in", true);
+                                log.info("User is already logged, a new login attempt was refused");
+                            }
+//                            byte[] saltBytes = objectToBytes(saltResponse);
+//                            byte[] saltHeader = ByteBuffer.allocate(4).putInt(saltBytes.length).array();
+//                            out.write(saltHeader);
+//                            out.write(saltBytes);
+                            Future<Boolean> loginResult = responsePool.submit(new ResponseTask(saltResponse, client));
+                            if (!saltResponse.isTerminating()) {
+                                int requestHeader = ByteBuffer.wrap(in.readNBytes(4)).getInt();
+                                byte[] requestBody = in.readNBytes(requestHeader);
                                 request = (AuthorizeRequest) bytesToObject(requestBody);
-                                log.info("Accepted a login request");
+                            } else {
+                                if (!loginResult.get()) {
+                                    client.close();
+                                }
                             }
                         }
                         if (request != null) {
@@ -170,6 +184,8 @@ public class Server {
                             try (DBManager newClientManager = new DBManager(dataSource.getConnection())) {
                                 user = newClientManager.authorizeUser(request);
                                 response = new ServerResponse("ok", false);
+                                activeUsers.add(user.getUsername());
+                                log.info(String.format("Client \"%s\" has authorized", user.getUsername()));
                             } catch (UserAuthorizationException e) {
                                 response = new ServerResponse(e.getMessage(), true);
                                 log.info("Failed to authorize the request");
@@ -187,10 +203,19 @@ public class Server {
                             }
                         }
                     } catch (IOException e) {
-                        log.error("Unknown IO exception occurred while processing a new client");
+                        log.error("Unknown IO exception occurred while processing a new client:");
                         log.error(e.getMessage());
-                        throw new RuntimeException(e);
+//                        throw new RuntimeException(e);
                         //               System.out.println("Couldn't get a user's input stream, abandoning them!");
+                    } catch (BufferUnderflowException e) {
+                        log.error("Client disconnected abruptly");
+                        try {
+                            client.close();
+                        } catch (IOException a) {
+                            throw new RuntimeException(a);
+                        }
+                    } catch (ExecutionException | InterruptedException e) {
+                        throw new RuntimeException(e);
                     }
                 }
             }).start();

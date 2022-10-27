@@ -75,8 +75,7 @@ public class UpdateCommand extends ElementCommand implements IDCommand, WriteCom
         } catch (GetByIDException e){
             output.append("No element with such an ID found.");
         } catch (ElementConstructionException e){
-            output.append("Couldn't change the object because: " + e.getMessage() + "\n" +
-                    "The element by the provided ID was left intact.");
+            output.append("Couldn't change the object because: ").append(e.getMessage()).append("\n").append("The element by the provided ID was left intact.");
         } catch (UserUnauthorizedException e) {
             output.append("Couldn't update the element because you don't have rights to it");
         } catch (SQLException e) {

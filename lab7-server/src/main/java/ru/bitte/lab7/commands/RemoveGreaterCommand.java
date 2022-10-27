@@ -16,6 +16,7 @@ import java.sql.SQLException;
  * @implNote An element command
  */
 @Log4j
+
 public class RemoveGreaterCommand extends ElementCommand implements WriteCommand {
     private final CollectionKeeper collection;
     private User credentials;

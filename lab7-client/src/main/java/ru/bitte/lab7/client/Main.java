@@ -23,7 +23,7 @@ public class Main {
         try {
             client.start();
         } catch (UserAuthorizationException e) {
-            System.out.println("Couldn't authorize because:");
+            System.out.print("Couldn't authorize because: ");
             System.out.println(e.getMessage());
         }
     }

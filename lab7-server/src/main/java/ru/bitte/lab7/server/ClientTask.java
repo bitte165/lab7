@@ -34,8 +34,14 @@ public class ClientTask implements Runnable {
         try {
             InputStream in = connection.getInputStream();
 //            OutputStream out = connection.getOutputStream();
+//            boolean working = true;
             while (true) {
                 int header = ByteBuffer.wrap(in.readNBytes(4)).getInt();
+                if (header == 0) {
+                    log.error(String.format("Client \"%s\" has disconnected abruptly", user.getUsername()));
+                    connection.close();
+                    break;
+                }
                 byte[] body = in.readNBytes(header);
                 AbstractCommandRequest request = (AbstractCommandRequest) Server.bytesToObject(body);
                 if (!user.equals(request.getCredentials())) {
@@ -46,7 +52,7 @@ public class ClientTask implements Runnable {
                 log.info(String.format("Ran the \"%s\" command", request.getCommandName()));
                 ResponseTask responseTask = response.get();
                 Future<Boolean> result = responsePool.submit(responseTask);
-                log.info(String.format("Send \"%s\" response to the command", user.getUsername()));
+                log.info(String.format("Sent \"%s\" response to the command", user.getUsername()));
                 if (result.get()) { // check if terminating
                     log.info(String.format("The user \"%s\" has successfully disconnected by the exit command",
                             request.getCredentials().getUsername()));
@@ -54,11 +60,11 @@ public class ClientTask implements Runnable {
                 }
             }
         } catch (IOException e) {
-            log.error("Unknown IO exception occurred while working with a client");
+            log.error(String.format("Unknown exception while executing a task: %s", e.getClass().getSimpleName()));
             log.error("Exception description: " + e.getMessage());
 //            throw new RuntimeException(e);
         } catch (InterruptedException | ExecutionException e) {
-            log.error("Unknown error while executing a task");
+            log.error(String.format("Unknown exception while executing a task: %s", e.getClass().getSimpleName()));
             log.error("Exception description: " + e.getMessage());
             throw new RuntimeException(e);
         }
