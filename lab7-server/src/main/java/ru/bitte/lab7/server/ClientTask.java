@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.Socket;
 import java.nio.ByteBuffer;
+import java.util.Set;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
@@ -19,14 +20,16 @@ public class ClientTask implements Runnable {
     private final User user;
     private final ExecutorService commandPool;
     private final ExecutorService responsePool;
+    private final Set<String> activeUsers;
 
 
-    public ClientTask(CommandHandler ch, Socket conn, User user, ExecutorService commandPool, ExecutorService responsePool) {
+    public ClientTask(CommandHandler ch, Socket conn, User user, ExecutorService commandPool, ExecutorService responsePool, Set<String> activeUsers) {
         commandHandler = ch;
         connection = conn;
         this.user = user;
         this.commandPool = commandPool;
         this.responsePool = responsePool;
+        this.activeUsers = activeUsers;
     }
 
     @Override
@@ -40,6 +43,7 @@ public class ClientTask implements Runnable {
                 if (header == 0) {
                     log.error(String.format("Client \"%s\" has disconnected abruptly", user.getUsername()));
                     connection.close();
+                    activeUsers.remove(user.getUsername());
                     break;
                 }
                 byte[] body = in.readNBytes(header);
@@ -59,6 +63,7 @@ public class ClientTask implements Runnable {
                     break;
                 }
             }
+            activeUsers.remove(user.getUsername());
         } catch (IOException e) {
             log.error(String.format("Unknown exception while executing a task: %s", e.getClass().getSimpleName()));
             log.error("Exception description: " + e.getMessage());
@@ -67,6 +72,8 @@ public class ClientTask implements Runnable {
             log.error(String.format("Unknown exception while executing a task: %s", e.getClass().getSimpleName()));
             log.error("Exception description: " + e.getMessage());
             throw new RuntimeException(e);
+        } finally {
+            activeUsers.remove(user.getUsername());
         }
     }
 }

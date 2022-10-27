@@ -31,13 +31,16 @@ public class Client {
         this.host = host;
         this.port = port;
         Runnable shutdown = () -> {
-            try {
-                out.write(new byte[] {0, 0, 0, 0});
-                socket.close();
-            } catch (IOException e) {
-                System.out.println(e.getMessage());
-            } catch (NullPointerException ignored) {}
-            inS.close();
+            if (!socket.isClosed()) {
+                try {
+                    out.write(new byte[]{0, 0, 0, 0});
+                    socket.close();
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                } catch (NullPointerException ignored) {
+                }
+                inS.close();
+            }
         };
         Runtime.getRuntime().addShutdownHook(new Thread(shutdown));
     }

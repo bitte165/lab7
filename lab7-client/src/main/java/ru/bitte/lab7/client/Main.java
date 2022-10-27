@@ -8,13 +8,8 @@ public class Main {
         String hostName = null;
         int port = 0;
         try {
-            if (args[0].equals("-h") && args[2].equals("-p") && args.length == 4) {
-                hostName = args[1];
-                port = Integer.parseInt(args[3]);
-            } else {
-                System.out.println(usage);
-                System.exit(0);
-            }
+            hostName = args[getIndexOf(args, "-h") + 1];
+            port = Integer.parseInt(args[getIndexOf(args, "-p") + 1]);
         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
             System.out.println(usage);
             System.exit(0);
@@ -26,5 +21,12 @@ public class Main {
             System.out.print("Couldn't authorize because: ");
             System.out.println(e.getMessage());
         }
+    }
+
+    private static int getIndexOf(String[] strings, String item) {
+        for (int i = 0; i < strings.length; i++) {
+            if (item.equals(strings[i])) return i;
+        }
+        throw new ArrayIndexOutOfBoundsException();
     }
 }

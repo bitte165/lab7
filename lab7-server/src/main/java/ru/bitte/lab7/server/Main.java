@@ -1,7 +1,8 @@
 package ru.bitte.lab7.server;
 
+import org.postgresql.util.PSQLException;
+
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,8 +12,10 @@ public class Main {
 //        int fIndex = System.getenv().get("PROPERTIES");
 //        int pIndex = System.getenv().get("port");
         try {
-            fileName = (String) System.getenv().get("PROPERTIES");
-            port = Integer.parseInt(System.getenv().get("PORT"));
+//            fileName = (String) System.getenv().get("PROPERTIES");
+//            port = Integer.parseInt(System.getenv().get("PORT"));
+            fileName = args[getIndexOf(args, "-f") + 1];
+            port = Integer.parseInt(args[getIndexOf(args, "-p") + 1]);
         } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
             System.out.println(usage);
             System.exit(0);
@@ -23,5 +26,12 @@ public class Main {
         } catch (IOException e) {
             System.out.println("Error reading from a file: " + e.getMessage());
         }
+    }
+
+    private static int getIndexOf(String[] strings, String item) {
+        for (int i = 0; i < strings.length; i++) {
+            if (item.equals(strings[i])) return i;
+        }
+        throw new ArrayIndexOutOfBoundsException();
     }
 }

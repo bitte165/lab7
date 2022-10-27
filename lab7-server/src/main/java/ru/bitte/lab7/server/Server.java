@@ -199,7 +199,7 @@ public class Server {
                             assert response != null;
                             if (!response.isTerminating()) {
                                 log.info("Starting a client handling task");
-                                clientPool.submit(new ClientTask(new CommandHandler(collectionKeeper), client, user, commandPool, responsePool));
+                                clientPool.submit(new ClientTask(new CommandHandler(collectionKeeper), client, user, commandPool, responsePool, activeUsers));
                             }
                         }
                     } catch (IOException e) {
