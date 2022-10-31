@@ -13,13 +13,11 @@ import java.nio.ByteBuffer;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Client {
-    private final Scanner inS = new Scanner(System.in);
-//    private final ClientConnector connector = new ClientConnector();
+//    private final Scanner inS = new Scanner(System.in);
     private Socket socket;
     private OutputStream out;
     private InputStream in;
@@ -31,7 +29,7 @@ public class Client {
         this.host = host;
         this.port = port;
         Runnable shutdown = () -> {
-            if (!socket.isClosed()) {
+            if (socket != null && !socket.isClosed()) {
                 try {
                     out.write(new byte[]{0, 0, 0, 0});
                     socket.close();
@@ -39,7 +37,7 @@ public class Client {
                     System.out.println(e.getMessage());
                 } catch (NullPointerException ignored) {
                 }
-                inS.close();
+//                inS.close();
             }
         };
         Runtime.getRuntime().addShutdownHook(new Thread(shutdown));
@@ -61,7 +59,8 @@ public class Client {
         System.out.println("Welcome to lab7! See \"help\" for the list of commands.");
         while (active) {
             System.out.print("> ");
-            String input = inS.nextLine();
+//            String input = inS.nextLine();
+            String input = System.console().readLine();
             AbstractCommandRequest commandRequest;
             try {
                 commandRequest = parseCommand(input);
@@ -107,7 +106,7 @@ public class Client {
         // closing the connection after exiting
         try {
             socket.close();
-            inS.close();
+//            inS.close();
         } catch (SocketException e) {
             System.out.printf("Network exception occurred: " + e.getMessage());
             System.exit(1);
@@ -120,7 +119,8 @@ public class Client {
 
     private void authorize() throws IOException, UserAuthorizationException {
         System.out.print("Do you want to login (L) or sign up (S)?: ");
-        String choice = inS.nextLine().strip();
+//        String choice = inS.nextLine().strip();
+        String choice = System.console().readLine().strip();
         if (choice.equalsIgnoreCase("L") || choice.equalsIgnoreCase("S")) {
             try {
                 socket = new Socket(host, port);
@@ -140,7 +140,8 @@ public class Client {
         }
         if (choice.equalsIgnoreCase("L")) {
             System.out.print("Enter username: ");
-            String username = inS.nextLine().strip();
+//            String username = inS.nextLine().strip();
+            String username = System.console().readLine().strip();
             byte[] saltBody = objectToBytes(new SaltRequest(username));
             byte[] saltHead = ByteBuffer.allocate(4).putInt(saltBody.length).flip().array();
             out.write(saltHead);
@@ -153,7 +154,8 @@ public class Client {
             } else {
                 String salt = response.getResponse();
                 System.out.print("Enter password: ");
-                String password = String.valueOf(inS.nextLine());
+//                String password = String.valueOf(inS.nextLine());
+                String password = String.valueOf(System.console().readPassword());
                 AuthorizeRequest ar = new AuthorizeRequest(username, password, salt);
                 user = ar.toUser();
                 byte[] arBody = objectToBytes(ar);
@@ -170,9 +172,11 @@ public class Client {
             }
         } else if (choice.equalsIgnoreCase("S")) {
             System.out.print("Enter username: ");
-            String username = inS.nextLine().strip();
+//            String username = inS.nextLine().strip();
+            String username = System.console().readLine().strip();
             System.out.print("Enter password: ");
-            String password = String.valueOf(inS.nextLine());
+//            String password = String.valueOf(inS.nextLine());
+            String password = String.valueOf(System.console().readPassword());
             AuthorizeRequest ar = new AuthorizeRequest(username, password, true);
             user = ar.toUser();
             byte[] arBody = objectToBytes(ar);

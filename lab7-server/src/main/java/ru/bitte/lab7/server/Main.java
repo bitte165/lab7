@@ -1,8 +1,7 @@
 package ru.bitte.lab7.server;
 
-import org.postgresql.util.PSQLException;
-
 import java.io.IOException;
+import java.net.SocketException;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,8 +22,14 @@ public class Main {
         try {
             Server server = new Server(fileName, port);
             server.start();
+        } catch (SocketException e) {
+            if (e.getMessage().equals("Socket closed")) {
+                System.out.println("Couldn't accept a new client because the server was closed");
+            } else {
+                System.out.println("SocketException: " + e.getMessage());
+            }
         } catch (IOException e) {
-            System.out.println("Error reading from a file: " + e.getMessage());
+            System.out.println("IO exception: " + e.getMessage());
         }
     }
 
